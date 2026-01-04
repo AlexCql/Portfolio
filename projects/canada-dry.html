@@ -6,63 +6,197 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../assets/css/main.css" />
-    <link rel="stylesheet" href="../assets/css/vintage.css" />
+    <style>
+        /* Background avec flou pour les sections - Override des styles du main.css */
+        #project-details.two,
+        #project-gallery.three {
+            position: relative !important;
+            overflow: hidden !important;
+            background-image: none !important;
+            background-color: transparent !important;
+        }
+        
+        /* Forcer l'affichage du ::before même si main.css le cache */
+        #project-details.two::before,
+        #project-gallery.three::before {
+            content: '' !important;
+            display: block !important;
+            position: absolute !important;
+            top: -50px !important;
+            left: -50px !important;
+            right: -50px !important;
+            bottom: -50px !important;
+            background-image: url('../images/Logo Canada dry.png') !important;
+            background-size: 120% !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+            filter: blur(15px) !important;
+            transform: scale(1.1) !important;
+            z-index: 0 !important;
+        }
+        
+        #project-details.two::after,
+        #project-gallery.three::after {
+            content: '' !important;
+            display: block !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            background: rgba(0, 0, 0, 0.5) !important;
+            z-index: 1 !important;
+        }
+        
+        #project-details.two .container,
+        #project-gallery.three .container {
+            position: relative !important;
+            z-index: 2 !important;
+        }
+        
+        #project-details.two,
+        #project-gallery.three {
+            color: #fff !important;
+        }
+        
+        #project-details.two h2,
+        #project-details.two h3,
+        #project-details.two p,
+        #project-details.two li,
+        #project-gallery.three h2,
+        #project-gallery.three h3,
+        #project-gallery.three p {
+            color: #fff !important;
+        }
+    </style>
 </head>
 
 <body class="is-preload">
 
     <!-- Header -->
-    <div id="header">
-        <div class="top">
-            <div id="logo">
-                <span class="image avatar48"><img src="../images/avatar.jpg" alt="" /></span>
-                <h1 id="title">Alexis Coquel</h1>
-                <p>Etudiant BUT MMI</p>
-            </div>
-            <nav id="nav">
-                <ul>
-                    <li><a href="../index.html#portfolio"><span class="icon solid fa-arrow-left">Retour au
-                                Portfolio</span></a></li>
-                    <li><a href="../index.html#top"><span class="icon solid fa-home">Présentation</span></a></li>
-                    <li><a href="../index.html#about"><span class="icon solid fa-user">A propos de moi</span></a></li>
-                    <li><a href="../index.html#contact"><span class="icon solid fa-envelope">Contact</span></a></li>
-                </ul>
-            </nav>
+    <header id="header-nav">
+        <div class="logo">
+            <h1><a href="../index.html">ALEXIS COQUEL</a></h1>
         </div>
-        <div class="bottom">
-            <ul class="icons">
-                <li><a href="#" class="icon brands fa-phone"><span class="label">Téléphone</span></a></li>
-                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        <nav>
+            <ul>
+                <li><a href="../index.html#hero">Accueil</a></li>
+                <li><a href="../projets.html">Projets</a></li>
+                <li><a href="../index.html#about">A propos</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
             </ul>
-        </div>
-    </div>
+        </nav>
+    </header>
 
     <!-- Main -->
     <div id="main">
-        <section id="project" class="one dark cover">
+
+        <!-- Project Hero -->
+        <section id="project-hero" class="one dark cover">
             <div class="container">
                 <header>
-                    <h2 class="alt">Rebranding Logo Canada Dry</h2>
+                    <h2 class="alt">Rebranding Canada Dry</h2>
+                    <p>Branding | Rebranding | Identité Visuelle</p>
                 </header>
                 <div class="row">
                     <div class="col-12">
-                        <a href="#" class="image fit"><img src="../images/Logo Canada dry.png"
-                                alt="Rebranding Canada Dry" /></a>
-                        <p>Proposition de refonte pour le logo de la marque Canada Dry. L'objectif était de moderniser
-                            l'image tout en gardant l'esprit de la marque.</p>
-                        <p>[Ajoutez ici plus de détails sur le choix des couleurs, la typographie, etc.]</p>
-                        <a href="../index.html#portfolio" class="button">Retour aux projets</a>
+                        <img src="../images/Logo Canada dry.png" alt="Rebranding Canada Dry" class="image fit" />
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Project Details -->
+        <section id="project-details" class="two">
+            <div class="container">
+                <header>
+                    <h2>Présentation du projet</h2>
+                </header>
+                <div class="row">
+                    <div class="col-8 col-12-mobile">
+                        <p>Refonte complète de l'identité visuelle de la marque Canada Dry avec une approche contemporaine tout en respectant les valeurs et l'héritage de la marque. Ce projet visait à moderniser l'image de la marque pour toucher un public plus jeune tout en conservant sa légitimité et sa reconnaissance.</p>
+                        
+                        <h3>Objectifs</h3>
+                        <ul>
+                            <li>Moderniser l'identité visuelle tout en préservant l'héritage de la marque</li>
+                            <li>Créer une nouvelle charte graphique cohérente et adaptable</li>
+                            <li>Développer une identité qui séduit les nouvelles générations</li>
+                            <li>Maintenir la lisibilité et la reconnaissance de la marque</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-4 col-12-mobile">
+                        <div class="project-info">
+                            <h3>Informations</h3>
+                            <ul class="alt">
+                                <li><strong>Type:</strong> Branding / Rebranding</li>
+                                <li><strong>Date:</strong> 2024</li>
+                                <li><strong>Contexte:</strong> Scolaire</li>
+                                <li><strong>Durée:</strong> 3 semaines</li>
+                            </ul>
+
+                            <h3>Technologies & Outils</h3>
+                            <ul class="alt">
+                                <li>Illustrator</li>
+                                <li>InDesign</li>
+                                <li>Photoshop</li>
+                            </ul>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Gallery -->
+        <section id="project-gallery" class="three">
+            <div class="container">
+                <header>
+                    <h2>Résultats</h2>
+                    <p>Le nouveau logo et les éléments de l'identité visuelle</p>
+                </header>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div style="text-align: center; padding: 2rem 0;">
+                            <img src="../images/Logo Canada dry.png" alt="Logo Canada Dry rebranding" class="image fit" style="max-height: 600px; object-fit: contain;" />
+                            <p style="margin-top: 1.5rem;">Le nouveau logo propose une version épurée et moderne tout en conservant les éléments caractéristiques de la marque.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Reflection -->
+        
+
+        <!-- Navigation -->
+        <section id="navigation" class="five">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                            <a href="../projets.html" class="button">
+                                <span class="icon solid fa-arrow-left"></span> Retour aux projets
+                            </a>
+                            
+                            <div style="display: flex; gap: 1rem;">
+                                <a href="couverture-artiste.html" class="button">← Projet précédent</a>
+                                <a href="back2street.html" class="button">Projet suivant →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 
     <!-- Footer -->
     <div id="footer">
         <ul class="copyright">
-            <li>&copy; Untitled. All rights reserved.</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>&copy; Alexis Coquel. All rights reserved.</li>
         </ul>
     </div>
 

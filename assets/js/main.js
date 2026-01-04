@@ -120,4 +120,31 @@
 					visibleClass: 'header-visible'
 				});
 
+
+		// Smart Navbar Logic
+		var lastScrollTop = 0;
+		var $headerNav = $('#header-nav');
+
+		$window.on('scroll', function() {
+			var scrollTop = $(this).scrollTop();
+
+			// Logic for "Scrolled" state (Background color)
+			if (scrollTop > 50) {
+				$headerNav.addClass('nav-scrolled');
+			} else {
+				$headerNav.removeClass('nav-scrolled');
+			}
+
+			// Logic for Hide/Show on scroll
+			if (scrollTop > lastScrollTop && scrollTop > 100) {
+				// Scroll Down -> Hide
+				$headerNav.addClass('nav-hidden');
+			} else {
+				// Scroll Up -> Show
+				$headerNav.removeClass('nav-hidden');
+			}
+
+			lastScrollTop = scrollTop;
+		});
+
 })(jQuery);

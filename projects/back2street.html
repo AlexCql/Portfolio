@@ -6,84 +6,207 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../assets/css/main.css" />
-    <link rel="stylesheet" href="../assets/css/vintage.css" />
+    <style>
+        /* Background avec flou pour les sections - Override des styles du main.css */
+        #project-details.two,
+        #project-gallery.three {
+            position: relative !important;
+            overflow: hidden !important;
+            background-image: none !important;
+            background-color: transparent !important;
+        }
+        
+        /* Forcer l'affichage du ::before même si main.css le cache */
+        #project-details.two::before,
+        #project-gallery.three::before {
+            content: '' !important;
+            display: block !important;
+            position: absolute !important;
+            top: -50px !important;
+            left: -50px !important;
+            right: -50px !important;
+            bottom: -50px !important;
+            background-image: url('../images/Logo B2S.png') !important;
+            background-size: 120% !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+            filter: blur(15px) !important;
+            transform: scale(1.1) !important;
+            z-index: 0 !important;
+        }
+        
+        #project-details.two::after,
+        #project-gallery.three::after {
+            content: '' !important;
+            display: block !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            background: rgba(0, 0, 0, 0.5) !important;
+            z-index: 1 !important;
+        }
+        
+        #project-details.two .container,
+        #project-gallery.three .container {
+            position: relative !important;
+            z-index: 2 !important;
+        }
+        
+        #project-details.two,
+        #project-gallery.three {
+            color: #fff !important;
+        }
+        
+        #project-details.two h2,
+        #project-details.two h3,
+        #project-details.two p,
+        #project-details.two li,
+        #project-gallery.three h2,
+        #project-gallery.three h3,
+        #project-gallery.three p {
+            color: #fff !important;
+        }
+    </style>
 </head>
 
 <body class="is-preload">
 
     <!-- Header -->
-    <div id="header">
-        <div class="top">
-            <div id="logo">
-                <span class="image avatar48"><img src="../images/avatar.jpg" alt="" /></span>
-                <h1 id="title">Alexis Coquel</h1>
-                <p>Etudiant BUT MMI</p>
-            </div>
-            <nav id="nav">
-                <ul>
-                    <li><a href="../index.html#portfolio"><span class="icon solid fa-arrow-left">Retour au
-                                Portfolio</span></a></li>
-                    <li><a href="../index.html#top"><span class="icon solid fa-home">Présentation</span></a></li>
-                    <li><a href="../index.html#about"><span class="icon solid fa-user">A propos de moi</span></a></li>
-                    <li><a href="../index.html#contact"><span class="icon solid fa-envelope">Contact</span></a></li>
-                </ul>
-            </nav>
+    <header id="header-nav">
+        <div class="logo">
+            <h1><a href="../index.html">ALEXIS COQUEL</a></h1>
         </div>
-        <div class="bottom">
-            <ul class="icons">
-                <li><a href="#" class="icon brands fa-phone"><span class="label">Téléphone</span></a></li>
-                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        <nav>
+            <ul>
+                <li><a href="../index.html#hero">Accueil</a></li>
+                <li><a href="../projets.html">Projets</a></li>
+                <li><a href="../index.html#about">A propos</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
             </ul>
-        </div>
-    </div>
+        </nav>
+    </header>
 
     <!-- Main -->
     <div id="main">
-        <section id="project" class="one dark cover">
+
+        <!-- Project Hero -->
+        <section id="project-hero" class="one dark cover">
             <div class="container">
                 <header>
                     <h2 class="alt">Back2Street</h2>
+                    <p>Événementiel | Culture Urbaine | Identité Visuelle</p>
                 </header>
                 <div class="row">
                     <div class="col-12">
-                        <a href="#" class="image fit"><img src="../images/Logo B2S.png" alt="Logo Back2Street" /></a>
-                        <h3>Le Projet</h3>
-                        <p>Back2Street est un projet d'événementiel autour de la culture urbaine. J'ai travaillé sur
-                            l'identité visuelle et la couverture vidéo de l'événement.</p>
-
-                        <h3>Vidéos</h3>
-                        <p>Découvrez les vidéos réalisées pour le projet :</p>
-                        <!-- Placeholder for video if available, or just keeping the audio/text logic from original index -->
-                        <div class="row">
-                            <div class="col-6 col-12-mobile">
-                                <h4>Interview</h4>
-                                <audio controls style="width: 100%;">
-                                    <source src="../ressources/Prod Interview.mp3" type="audio/mp3">
-                                    Votre navigateur ne supporte pas l'élément audio.
-                                </audio>
-                            </div>
-                            <div class="col-6 col-12-mobile">
-                                <h4>Réseaux</h4>
-                                <audio controls style="width: 100%;">
-                                    <source src="../ressources/Prod réseaux.mp3" type="audio/mp3">
-                                    Votre navigateur ne supporte pas l'élément audio.
-                                </audio>
-                            </div>
-                        </div>
-
-                        <br />
-                        <a href="../index.html#portfolio" class="button">Retour aux projets</a>
+                        <img src="../images/Logo B2S.png" alt="Logo Back2Street" class="image fit" />
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Project Details -->
+        <section id="project-details" class="two">
+            <div class="container">
+                <header>
+                    <h2>Présentation du projet</h2>
+                </header>
+                <div class="row">
+                    <div class="col-8 col-12-mobile">
+                        <p>Back2Street est un projet d'événementiel autour de la culture urbaine. J'ai travaillé sur l'identité visuelle et la couverture vidéo de l'événement.</p>
+                        
+                        <h3>Objectifs</h3>
+                        <ul>
+                            <li>Créer une identité visuelle forte pour l'événement</li>
+                            <li>Produire du contenu audiovisuel pour la promotion</li>
+                            <li>Développer une communication cohérente sur les réseaux</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-4 col-12-mobile">
+                        <div class="project-info">
+                            <h3>Informations</h3>
+                            <ul class="alt">
+                                <li><strong>Type:</strong> Événementiel</li>
+                                <li><strong>Date:</strong> 2024</li>
+                                <li><strong>Contexte:</strong> Scolaire</li>
+                                <li><strong>Durée:</strong> 3 semaines</li>
+                            </ul>
+
+                            <h3>Technologies & Outils</h3>
+                            <ul class="alt">
+                                <li>Photoshop</li>
+                                <li>Premiere Pro</li>
+                                <li>Audition</li>
+                                <li>Illustrator</li>
+                            </ul>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Gallery -->
+        <section id="project-gallery" class="three">
+            <div class="container">
+                <header>
+                    <h2>Résultats</h2>
+                    <p>Découvrez les productions audio réalisées pour le projet Back2Street</p>
+                </header>
+
+                <div class="row">
+                    <div class="col-6 col-12-mobile">
+                        <h3>Interview</h3>
+                        <p>Production audio pour l'interview d'un artiste participant à l'événement.</p>
+                        <audio controls style="width: 100%; margin-top: 1rem;">
+                            <source src="../ressources/Prod Interview.mp3" type="audio/mp3">
+                            Votre navigateur ne supporte pas l'élément audio.
+                        </audio>
+                    </div>
+                    <div class="col-6 col-12-mobile">
+                        <h3>Réseaux</h3>
+                        <p>Audio promotionnel pour les réseaux sociaux afin de générer de l'engagement.</p>
+                        <audio controls style="width: 100%; margin-top: 1rem;">
+                            <source src="../ressources/Prod réseaux.mp3" type="audio/mp3">
+                            Votre navigateur ne supporte pas l'élément audio.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Reflection -->
+        
+
+        <!-- Navigation -->
+        <section id="navigation" class="five">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                            <a href="../projets.html" class="button">
+                                <span class="icon solid fa-arrow-left"></span> Retour aux projets
+                            </a>
+                            
+                            <div style="display: flex; gap: 1rem;">
+                                <a href="canada-dry.html" class="button">← Projet précédent</a>
+                                <a href="couverture-artiste.html" class="button">Projet suivant →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 
     <!-- Footer -->
     <div id="footer">
         <ul class="copyright">
-            <li>&copy; Untitled. All rights reserved.</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>&copy; Alexis Coquel. All rights reserved.</li>
         </ul>
     </div>
 

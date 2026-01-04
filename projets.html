@@ -1,138 +1,17 @@
 <!DOCTYPE HTML>
-<!--
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 
 <head>
     <title>Mes Projets - Alexis Coquel</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/vintage.css" />
-    <style>
-        /* Additional styles for projects page */
-        .projects-hero {
-            padding: 6rem 5%;
-            text-align: center;
-            background-color: var(--color-cream);
-        }
-
-        .projects-hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            color: var(--color-dark);
-            margin-bottom: 1rem;
-            letter-spacing: 0.05em;
-        }
-
-        .projects-hero p {
-            font-size: 1.1rem;
-            color: var(--color-light-brown);
-            max-width: 700px;
-            margin: 0 auto 3rem;
-            line-height: 1.8;
-        }
-
-        .projects-grid {
-            padding: 3rem 5% 6rem;
-            background-color: var(--color-cream);
-        }
-
-        .projects-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .project-card {
-            margin-bottom: 4rem;
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-card .image {
-            overflow: hidden;
-            display: block;
-            margin-bottom: 1.5rem;
-            width: 100%;
-            height: 350px;
-            border: 1px solid rgba(93, 64, 55, 0.1);
-        }
-
-        .project-card .image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            display: block;
-            transition: transform 0.5s ease, filter 0.3s ease;
-        }
-
-        .project-card:hover .image img {
-            transform: scale(1.08);
-        }
-
-        .project-card header {
-            text-align: center;
-            padding: 0;
-        }
-
-        .project-card header h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            color: var(--color-dark);
-            margin-bottom: 0.5rem;
-            letter-spacing: 0.02em;
-        }
-
-        .project-card .description {
-            text-align: center;
-            color: var(--color-brown);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-top: 1rem;
-        }
-
-        .view-project-btn {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.8rem 2rem;
-            background-color: transparent;
-            color: var(--color-dark);
-            border: 1px solid var(--color-dark);
-            text-decoration: none;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            transition: all 0.3s ease;
-        }
-
-        .view-project-btn:hover {
-            background-color: var(--color-dark);
-            color: var(--color-cream);
-        }
-
-        /* Responsive */
-        @media screen and (max-width: 736px) {
-            .projects-hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .project-card {
-                margin-bottom: 3rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/main.css" /> 
+    <link rel="stylesheet" href="assets/css/projets.css" />
 </head>
 
 <body class="is-preload">
 
-    <!-- Header (Top Nav) -->
     <header id="header-nav">
         <div class="logo">
             <h1><a href="index.html">ALEXIS COQUEL</a></h1>
@@ -147,85 +26,122 @@
         </nav>
     </header>
 
-    <!-- Main -->
     <div id="main">
 
-        <!-- Projects Hero -->
-        <section class="projects-hero">
-            <h1>Mes Projets</h1>
-            <p>Découvrez l'ensemble de mes réalisations en création audiovisuelle et design graphique.
-                Ces projets ont été réalisés dans le cadre de mon BUT MMI ainsi que lors de créations personnelles.</p>
+        <section id="projects-hero" class="one">
+            <div class="container">
+                <header>
+                    <h2 class="alt">Mes Projets</h2>
+                    <p>Découvrez l'ensemble de mes réalisations en création audiovisuelle et design graphique.<br>
+                    Ces projets ont été réalisés dans le cadre de mon BUT MMI ainsi que lors de créations personnelles.</p>
+                </header>
+            </div>
         </section>
 
-        <!-- Projects Grid -->
-        <section class="projects-grid">
+        <section id="projects-grid" class="two">
             <div class="projects-container">
-                <div class="row">
-                    <!-- Project 1: Couverture d'artiste -->
-                    <div class="col-4 col-12-mobile">
-                        <article class="project-card">
-                            <a href="projects/couverture-artiste.html" class="image">
-                                <img src="images/Alexis_Coquel_couverture_3.jpg" alt="Couverture d'un artiste" />
-                            </a>
-                            <header>
-                                <h3>Couverture d'un artiste</h3>
-                            </header>
-                            <div class="description">
-                                <p>Création d'une couverture d'album pour un artiste, alliant esthétique moderne et
-                                    identité visuelle forte.</p>
-                                <a href="projects/couverture-artiste.html" class="view-project-btn">Voir le projet</a>
+                <div class="projects-list">
+                    
+                    <!-- Projet 1 -->
+                    <div class="project-item">
+                        <div class="project-header">
+                            <div class="project-thumbnail">
+                            <a href="projects/couverture-artiste.html"><img id="mick_gordon" src="images/Alexis_Coquel_couverture_3.jpg" alt="Couverture d'un artiste" /></a>
                             </div>
-                        </article>
+                            <div class="project-info">
+                                <h3><a href="projects/couverture-artiste.html" style="text-decoration: none; color: inherit;">Couverture d'un artiste</a></h3>
+                                <div class="project-meta">
+                                    <span class="tag">Design Graphique</span>
+                                    <span class="tag">Illustration</span>
+                                    <span class="date">2024</span>
+                                </div>
+                                <p>Création d'une couverture d'album pour un artiste, alliant esthétique moderne et identité visuelle forte.</p>
+                                <div class="project-details">
+                                    <div class="detail-item">
+                                        <strong>Contexte:</strong> Scolaire
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Outils:</strong> Photoshop, Illustrator
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Durée:</strong> 2 semaines
+                                    </div>
+                                </div>
+                                <a href="projects/couverture-artiste.html" class="button" style="margin-top: 1rem;">Voir le projet</a>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Project 2: Canada Dry -->
-                    <div class="col-4 col-12-mobile">
-                        <article class="project-card">
-                            <a href="projects/canada-dry.html" class="image">
-                                <img src="images/Logo Canada dry.png" alt="Rebranding Canada Dry" />
-                            </a>
-                            <header>
-                                <h3>Rebranding Canada Dry</h3>
-                            </header>
-                            <div class="description">
-                                <p>Refonte complète de l'identité visuelle de la marque Canada Dry avec une approche
-                                    contemporaine.</p>
-                                <a href="projects/canada-dry.html" class="view-project-btn">Voir le projet</a>
+                    <!-- Projet 2 -->
+                    <div class="project-item">
+                        <div class="project-header">
+                            <div class="project-thumbnail logo-center">
+                                <a href="projects/canada-dry.html"><img src="images/Logo Canada dry.png" alt="Rebranding Canada Dry" /></a>
                             </div>
-                        </article>
+                            <div class="project-info">
+                                <h3><a href="projects/canada-dry.html" style="text-decoration: none; color: inherit;">Rebranding Canada Dry</a></h3>
+                                <div class="project-meta">
+                                    <span class="tag">Branding</span>
+                                    <span class="tag">Rebranding</span>
+                                    <span class="date">2024</span>
+                                </div>
+                                <p>Refonte complète de l'identité visuelle de la marque Canada Dry avec une approche contemporaine.</p>
+                                <div class="project-details">
+                                    <div class="detail-item">
+                                        <strong>Contexte:</strong> Scolaire
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Outils:</strong> Illustrator, InDesign
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Durée:</strong> 3 semaines
+                                    </div>
+                                </div>
+                                <a href="projects/canada-dry.html" class="button" style="margin-top: 1rem;">Voir le projet</a>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Project 3: Back2Street -->
-                    <div class="col-4 col-12-mobile">
-                        <article class="project-card">
-                            <a href="projects/back2street.html" class="image">
-                                <img src="images/Logo B2S.png" alt="Back2Street" />
-                            </a>
-                            <header>
-                                <h3>Back2Street</h3>
-                            </header>
-                            <div class="description">
-                                <p>Conception d'une identité de marque complète pour Back2Street, projet urbain et
-                                    streetwear.</p>
-                                <a href="projects/back2street.html" class="view-project-btn">Voir le projet</a>
+                    <!-- Projet 3 -->
+                    <div class="project-item">
+                        <div class="project-header">
+                            <div class="project-thumbnail logo-center">
+                            <a href="projects/back2street.html"><img src="images/Logo B2S.png" alt="Back2Street" /></a>
                             </div>
-                        </article>
+                            <div class="project-info">
+                                <h3><a href="projects/back2street.html" style="text-decoration: none; color: inherit;">Back2Street</a></h3>
+                                <div class="project-meta">
+                                    <span class="tag">Événementiel</span>
+                                    <span class="tag">Culture Urbaine</span>
+                                    <span class="date">2024</span>
+                                </div>
+                                <p>Conception d'une identité de marque complète pour Back2Street, projet urbain et streetwear.</p>
+                                <div class="project-details">
+                                    <div class="detail-item">
+                                        <strong>Contexte:</strong> Scolaire
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Outils:</strong> Photoshop, Premiere Pro, Audition
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Durée:</strong> 3 semaines
+                                    </div>
+                                </div>
+                                <a href="projects/back2street.html" class="button" style="margin-top: 1rem;">Voir le projet</a>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
     </div>
 
-    <!-- Footer -->
     <div id="footer">
-
-        <!-- Copyright -->
         <ul class="copyright">
-            <li>&copy; Untitled. All rights reserved.</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>&copy; Alexis Coquel. All rights reserved.</li>
         </ul>
-
     </div>
 
     <!-- Scripts -->

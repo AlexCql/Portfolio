@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 
 <head>
@@ -11,7 +7,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="assets/css/vintage.css" />
+	
 </head>
 
 <body class="is-preload">
@@ -27,7 +23,7 @@
 				<li><a href="#hero">Accueil</a></li>
 				<li><a href="projets.html">Projets</a></li>
 				<li><a href="#about">A propos</a></li>
-				<li><a href="#contact">Contact</a></li>
+				<li><a href="#contact">Contacts</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -38,15 +34,8 @@
 		<!-- Hero Section -->
 		<section id="hero">
 			<div class="hero-content">
-				<div class="hero-text">
-					<h2>ALEXIS COQUEL</h2>
-					<p>ETUDIANT BUT MMI<br>CREATION AUDIOVISUELLE</p>
-				</div>
-				<div class="hero-images">
-					<div class="img-1"><img src="images/Alexis_Coquel_couverture_3.jpg" alt="" /></div>
-					<div class="img-2"><img src="images/pic08.jpg" alt="" /></div>
-					<!-- <div class="img-3"><img src="images/avatar.jpg" alt="" /></div> -->
-				</div>
+				<h2>ALEXIS COQUEL</h2>
+				<p>ETUDIANT BUT MMI<br>CREATION AUDIOVISUELLE</p>
 			</div>
 		</section>
 
@@ -55,12 +44,36 @@
 		<section id="portfolio" class="two">
 			<div class="container">
 
-				<header>
-					<h2>Portfolio</h2>
+				<header style="display: flex; justify-content: space-between; align-items: center;">
+					<h2>Mes projets</h2>
+					<a href="projets.html" class="button"
+						style="white-space: nowrap; padding: 1.2rem 2.5rem; font-size: 1rem; position: relative; overflow: hidden; animation: pulse 2s infinite;">Voir tous mes projets</a>
+					<style>
+						@keyframes pulse {
+							0%, 100% { transform: scale(1); }
+							50% { transform: scale(1.05); }
+						}
+						.button::before {
+							content: '';
+							position: absolute;
+							top: 0;
+							left: -100%;
+							width: 100%;
+							height: 100%;
+							background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+							transition: left 0.5s;
+						}
+						.button:hover::before {
+							left: 100%;
+						}
+					</style>
 				</header>
 
-				<p>Ce portfolio rassemble principalement des projets réalisés dans le cadre de mon BUT MMI, auxquels
-					s’ajoutent quelques créations personnelles.</p>
+				<div style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+					<p style="margin: 0;">Ce portfolio rassemble principalement des projets réalisés dans le cadre de
+						mon BUT MMI, auxquels
+						s'ajoutent quelques créations personnelles.</p>
+				</div>
 
 				<div class="row">
 					<div class="col-4 col-12-mobile">
@@ -105,8 +118,8 @@
 
 				<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
 
-				<p>Depuis petit , je suis passionné par la création audiovisuelle et le design graphique.</p>
-
+				<p>Depuis petit , je suis passionné par la création audiovisuelle. La musique est ma principale source d'inspiration , c'est pourquoi , il y a quelques années , j'ai commencé çà produire mes propres musiques sur FL Studio.</p>
+				<p>J'ai également commencé à m'interressé l'animation 2D et 3D durant mes études et le BUT MMI m'a permis de développer mes compétences dans différents domaines complémentaire à mes passions.  </p>
 			</div>
 		</section>
 
@@ -115,24 +128,17 @@
 			<div class="container">
 
 				<header>
-					<h2>Contact</h2>
+					<h2>Contacts</h2>
 				</header>
 
-				<p>Vous pouvez me contacter via le formulaire ci-dessous.</p>
+				<p>Vous pouvez me contacter via ces plateformes :</p>
 
-				<form method="post" action="#">
-					<div class="row">
-						<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-						<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
-						<div class="col-12">
-							<textarea name="message" placeholder="Message"></textarea>
-						</div>
-						<div class="col-12">
-							<input type="submit" value="Send Message" />
-						</div>
-					</div>
-				</form>
-
+				<ul class="icons contact-socials">
+					<li><a href="mailto:alexis.coquel.pro@gmail.com" class="icon solid fa-envelope"><span
+								class="label">Email</span></a></li>
+					<li><a href="https://www.linkedin.com/in/alexis-coquel-690b66386/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="#" class="icon brands fa-youtube"><span class="label">Youtube</span></a></li>
+				</ul>
 			</div>
 		</section>
 
@@ -143,12 +149,10 @@
 
 		<!-- Copyright -->
 		<ul class="copyright">
-			<li>&copy; Untitled. All rights reserved.</li>
-			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			<li>&copy; Alexis Coquel. All rights reserved.</li>
 		</ul>
 
 	</div>
-
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
